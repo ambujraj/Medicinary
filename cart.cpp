@@ -104,7 +104,7 @@ while(1){
     cout << "Enter any other number to Exit" << endl<< endl;
     cout << "Enter Your choice: ";
     cin >> in;
-
+    system("cls");
     if(in == 1){
         ifstream fin;
         fin.open("medicinedata.txt", ios::in);
@@ -221,7 +221,7 @@ while(1){
             m[idd-1].stocks -= amo;
             strcpy(car.m, m[idd-1].man);
             strcpy(car.e, m[idd-1].exp);
-            cout<<"                      Added to cart"<<endl;
+            cout<<endl<<endl<<"                      Added to cart"<<endl;
             fout.write((char*)&car, sizeof(car));
             fout.close();
         }
@@ -288,6 +288,7 @@ while(1){
             foutt.write((char *)&car, sizeof(car));
             foutt.close();
         fii.close();
+        medicine::id=1;
     }
     else if(in==3){
         ifstream fint;
@@ -305,7 +306,7 @@ while(1){
     fint.close();
     }
     else{
-        cout<<"Have a nice Day !!";
+        cout<<"Thank You for Visiting !!";
         exit(0);
     }
 
