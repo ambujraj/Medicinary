@@ -87,14 +87,18 @@ void auth()
    if(pass == "qwerty"){
       cout <<endl<<endl<< "Access Granted!";
       x=123;
+      system("cls");
       break;
    }else if(pass !="qwerty"){
+       system("cls");
       cout <<endl<< "Wrong Password!! "<<endl<<"\t"<<"Attempts left: "<<5-count<<endl;
       ++count;
 
 
       if(count>5){
-          cout<<"Access Denied";
+            system("cls");
+            system("color CF");
+          cout<<endl<<endl<<"Access Denied";
           exit(0);
       }
    }}
@@ -121,6 +125,7 @@ int main()
         cout << "Enter any other number to Exit" << endl<< endl;
         cout << "Enter Your choice: ";
         cin >> in;
+        system("cls");
         if (in == 1)
         {
             ifstream fi;
@@ -130,7 +135,7 @@ int main()
                 cout <<endl<< "File cannot be opened";
                 exit(0);
             }
-            
+
             for(int i=0;i<12;i++){
                 fi.read((char*)&m[i], sizeof(m[i]));
             }
@@ -156,7 +161,8 @@ int main()
             }
             if (temp != 321)
             {
-                cout << "Sorry, Medicine Name not found" << endl;
+                system("cls");
+                cout << "Sorry, No Medicine found of Name: "<<n<< endl;
                 continue;
             }
             fi.close();
@@ -201,7 +207,7 @@ int main()
             }
             for(int i=0;i<12;i++)
             {
-                
+
                 cout << "-------------------------------------------------------------------------------------" << endl;
                 m[i].show();
                 cout << "-------------------------------------------------------------------------------------" << endl;
